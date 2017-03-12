@@ -1,0 +1,44 @@
+{
+    "name": "luwes/craft3-inline",
+    "description": "Inline the contents of a file in a twig template.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "inline"
+    ],
+    "support": {
+        "docs": "https://github.com/luwes/craft3-inline/blob/master/README.md",
+        "issues": "https://github.com/luwes/craft3-inline/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wesley Luyten",
+            "homepage": "https://wesleyluyten.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "~3.0.0-beta.1"
+    },
+    "autoload": {
+        "psr-4": {
+          "luwes\\inline\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Inline",
+        "handle": "inline",
+        "schemaVersion": "1.0.0",
+        "hasSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/luwes/craft3-inline/master/CHANGELOG.md",
+        "components": {
+            "inlineService": "luwes\\inline\\services\\InlineService"
+        },
+        "class": "luwes\\inline\\Inline"
+    }
+}
