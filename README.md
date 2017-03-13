@@ -19,7 +19,7 @@ Internally uses the PHP function `file_get_contents`.
 
 ## Using Inline
 
-`{{ inline(assetsUrl ~ '/images/logo.svg') }}`
+`{{ inline(assetsUrl ~ '/images/logo.svg') | raw }}`
 
 ## Inline Roadmap
 

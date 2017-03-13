@@ -14,7 +14,6 @@ use luwes\inline\Inline;
 
 use Craft;
 use craft\base\Component;
-use craft\helpers\Template;
 
 /**
  * InlineService Service
@@ -47,6 +46,6 @@ class InlineService extends Component
     public function get($uri = null)
     {
         $file = @file_get_contents($uri);
-        return Template::raw($file);
+        return $file;
     }
 }
