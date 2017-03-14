@@ -23,7 +23,7 @@
 
 return [
 
-    // This controls blah blah blah
-    "someSetting" => true,
+	// This controls blah blah blah
+	"someSetting" => true,
 
 ];

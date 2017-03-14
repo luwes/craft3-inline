@@ -39,49 +39,49 @@ use luwes\inline\services\InlineService as InlineServiceService;
  */
 class Inline extends Plugin
 {
-    // Static Properties
-    // =========================================================================
+	// Static Properties
+	// =========================================================================
 
-    /**
-     * Static property that is an instance of this plugin class so that it can be accessed via
-     * Inline::$plugin
-     *
-     * @var Inline
-     */
-    public static $plugin;
+	/**
+	 * Static property that is an instance of this plugin class so that it can be accessed via
+	 * Inline::$plugin
+	 *
+	 * @var Inline
+	 */
+	public static $plugin;
 
-    // Public Methods
-    // =========================================================================
+	// Public Methods
+	// =========================================================================
 
-    /**
-     * Set our $plugin static property to this class so that it can be accessed via
-     * Inline::$plugin
-     *
-     * Called after the plugin class is instantiated; do any one-time initialization
-     * here such as hooks and events.
-     *
-     * If you have a '/vendor/autoload.php' file, it will be loaded for you automatically;
-     * you do not need to load it in your init() method.
-     *
-     */
-    public function init()
-    {
-        parent::init();
-        self::$plugin = $this;
+	/**
+	 * Set our $plugin static property to this class so that it can be accessed via
+	 * Inline::$plugin
+	 *
+	 * Called after the plugin class is instantiated; do any one-time initialization
+	 * here such as hooks and events.
+	 *
+	 * If you have a '/vendor/autoload.php' file, it will be loaded for you automatically;
+	 * you do not need to load it in your init() method.
+	 *
+	 */
+	public function init()
+	{
+		parent::init();
+		self::$plugin = $this;
 
-        // Add in our Twig extensions
-        Craft::$app->view->twig->addExtension(new InlineTwigExtension());
+		// Add in our Twig extensions
+		Craft::$app->view->twig->addExtension(new InlineTwigExtension());
 
-        // Do something after we're installed
-        Event::on(
-            Plugins::className(),
-            Plugins::EVENT_AFTER_INSTALL_PLUGIN,
-            function (PluginEvent $event) {
-                if ($event->plugin === $this) {
-                    // We were just installed
-                }
-            }
-        );
+		// Do something after we're installed
+		Event::on(
+			Plugins::className(),
+			Plugins::EVENT_AFTER_INSTALL_PLUGIN,
+			function (PluginEvent $event) {
+				if ($event->plugin === $this) {
+					// We were just installed
+				}
+			}
+		);
 
 /**
  * Logging in Craft involves using one of the following methods:
@@ -101,10 +101,10 @@ class Inline extends Plugin
  *
  * http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html
  */
-        Craft::info('Inline ' . Craft::t('inline', 'plugin loaded'), __METHOD__);
-    }
+		Craft::info('Inline ' . Craft::t('inline', 'plugin loaded'), __METHOD__);
+	}
 
-    // Protected Methods
-    // =========================================================================
+	// Protected Methods
+	// =========================================================================
 
 }

@@ -30,22 +30,22 @@ use craft\base\Component;
  */
 class InlineService extends Component
 {
-    // Public Methods
-    // =========================================================================
+	// Public Methods
+	// =========================================================================
 
-    /**
-     * This function can literally be anything you want, and you can have as many service
-     * functions as you want
-     *
-     * From any other plugin file, call it like this:
-     *
-     *     Inline::$plugin->inlineService->exampleService()
-     *
-     * @return mixed
-     */
-    public function get($uri = null)
-    {
-        $file = @file_get_contents($uri);
-        return $file;
-    }
+	/**
+	 * This function can literally be anything you want, and you can have as many service
+	 * functions as you want
+	 *
+	 * From any other plugin file, call it like this:
+	 *
+	 *     Inline::$plugin->inlineService->exampleService()
+	 *
+	 * @return mixed
+	 */
+	public function get($uri = null)
+	{
+		$file = @file_get_contents($uri);
+		return $file;
+	}
 }

@@ -27,56 +27,56 @@ use Craft;
  */
 class InlineTwigExtension extends \Twig_Extension
 {
-    // Public Methods
-    // =========================================================================
+	// Public Methods
+	// =========================================================================
 
-    /**
-     * Returns the name of the extension.
-     *
-     * @return string The extension name
-     */
-    public function getName()
-    {
-        return 'Inline';
-    }
+	/**
+	 * Returns the name of the extension.
+	 *
+	 * @return string The extension name
+	 */
+	public function getName()
+	{
+		return 'Inline';
+	}
 
-    /**
-     * Returns an array of Twig filters, used in Twig templates via:
-     *
-     *      {{ 'something' | someFilter }}
-     *
-     * @return array
-     */
-    public function getFilters()
-    {
-        return [
-            new \Twig_SimpleFilter('inline', [$this, 'handleInline']),
-        ];
-    }
+	/**
+	 * Returns an array of Twig filters, used in Twig templates via:
+	 *
+	 *      {{ 'something' | someFilter }}
+	 *
+	 * @return array
+	 */
+	public function getFilters()
+	{
+		return [
+			new \Twig_SimpleFilter('inline', [$this, 'handleInline']),
+		];
+	}
 
-    /**
-     * Returns an array of Twig functions, used in Twig templates via:
-     *
-     *      {% set this = someFunction('something') %}
-     *
-    * @return array
-     */
-    public function getFunctions()
-    {
-        return [
-            new \Twig_SimpleFunction('inline', [$this, 'handleInline']),
-        ];
-    }
+	/**
+	 * Returns an array of Twig functions, used in Twig templates via:
+	 *
+	 *      {% set this = someFunction('something') %}
+	 *
+	* @return array
+	 */
+	public function getFunctions()
+	{
+		return [
+			new \Twig_SimpleFunction('inline', [$this, 'handleInline']),
+		];
+	}
 
-    /**
-     * Our function called via Twig; it can do anything you want
-     *
-     * @param null $text
-     *
-     * @return string
-     */
-    public function handleInline($uri = null)
-    {
-        return Inline::$plugin->inlineService->get($uri);
-    }
+	/**
+	 * Our function called via Twig; it can do anything you want
+	 *
+	 * @param null $text
+	 *
+	 * @return string
+	 */
+	public function handleInline($uri = null)
+	{
+		return Inline::$plugin->inlineService->get($uri);
+	}
 }
