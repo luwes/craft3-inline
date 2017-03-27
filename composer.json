@@ -33,8 +33,6 @@
         "name": "Inline",
         "handle": "inline",
         "schemaVersion": "1.0.0",
-        "hasSettings": false,
-        "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/luwes/craft3-inline/master/CHANGELOG.md",
         "components": {
             "inlineService": "luwes\\inline\\services\\InlineService"
